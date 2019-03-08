@@ -85,9 +85,14 @@ int main(int argc, char* argv[])
     filled_rect.h = 100;
     SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255); // green
     SDL_RenderFillRect(renderer, &filled_rect);
-    SDL_UpdateWindowSurface(window);
-    // het code ve;
 
+	
+   //Khi thông thường chạy với môi trường bình thường ở nhà
+    //SDL_RenderPresent(renderer);
+   //Khi chạy ở máy thực hành WinXP ở trường (máy ảo)
+   SDL_UpdateWindowSurface(window);
+	
+	// het code ve;
 
     waitUntilKeyPressed();
     quitSDL(window, renderer);
