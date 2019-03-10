@@ -1,6 +1,9 @@
 #include <iostream>
 #include <SDL.h>
 
+#define at_home
+
+
 using namespace std;
 
 const int SCREEN_WIDTH = 800;
@@ -27,16 +30,21 @@ void initSDL(SDL_Window* &window, SDL_Renderer* &renderer)
 
     window = SDL_CreateWindow(WINDOW_TITLE.c_str(), SDL_WINDOWPOS_CENTERED,
        SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-    //window = SDL_CreateWindow(WINDOW_TITLE.c_str(), SDL_WINDOWPOS_CENTERED,
-       (SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_FULLSCREEN_DESKTOP);
+
+         window = SDL_CreateWindow(WINDOW_TITLE.c_str(), SDL_WINDOWPOS_CENTERED,
+       SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_FULLSCREEN_DESKTOP);
     if (window == nullptr) logSDLError(std::cout, "CreateWindow", true);
 
 
     //Khi thông thường chạy với môi trường bình thường ở nhà
-    //renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED |
-                                              //SDL_RENDERER_PRESENTVSYNC);
+    #ifdef at_home
+    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED |
+                                              SDL_RENDERER_PRESENTVSYNC);
+     #else
     //Khi chạy ở máy thực hành WinXP ở trường (máy ảo)
     renderer = SDL_CreateSoftwareRenderer(SDL_GetWindowSurface(window));
+    #endif // at_home
+
     if (renderer == nullptr) logSDLError(std::cout, "CreateRenderer", true);
 
     SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
@@ -86,12 +94,14 @@ int main(int argc, char* argv[])
     SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255); // green
     SDL_RenderFillRect(renderer, &filled_rect);
 
-	
+
    //Khi thông thường chạy với môi trường bình thường ở nhà
-    //SDL_RenderPresent(renderer);
+   #ifdef at_home
+    SDL_RenderPresent(renderer);
+    #else
    //Khi chạy ở máy thực hành WinXP ở trường (máy ảo)
    SDL_UpdateWindowSurface(window);
-	
+	#endif // at_home
 	// het code ve;
 
     waitUntilKeyPressed();
