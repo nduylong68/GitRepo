@@ -1,0 +1,8 @@
+Dong lenh sau in ra ket qua gi ?
+if (10 > 5); 
+	 else; {           
+	    cout << "Here";
+	 };
+
+Tra loi:
+Dong lenh tren in ra Here.

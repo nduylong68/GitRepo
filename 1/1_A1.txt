@@ -1,0 +1,10 @@
+Lenh sau dây làm gì khi grade là mot bien kieu int? Neu có loi cú pháp,
+hãy sua loi.
+bool isA = (90 <= grade <= 100);
+
+Tra loi:
+Khi grade là mot bien kieu int, tra ve true khi grade có giá tri 
+nam trong khoang tu 90 den 100. Tra ve false neu không phai.
+
+Sua loi cú pháp:
+bool isA = ( (90 <= grade) && (grade <= 100));

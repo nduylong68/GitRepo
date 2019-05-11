@@ -1,0 +1,5 @@
+Bieu thuc sau có giá tri gì?
+(Math.sqrt(2) * Math.sqrt(2) == 2)
+
+Tra loi:
+Gia tri cua bieu thuc chua xac dinh ro vi con tuy thuoc vao bien Math.

@@ -1,0 +1,13 @@
+int arg1;
+	arg1 = -1;
+	{
+	  char arg1 = ’A’; 
+	} 
+	cout << arg1 << "\n"; 
+	return 0; 
+
+
+Khi ra khoi khoi lenh con, dinh danh arg1 chi toi bien arg1 nao?
+
+Tra loi:
+Khi ra khoi khoi lenh con, dinh danh arg chi toi bien arg kieu int.

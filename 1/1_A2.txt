@@ -1,0 +1,7 @@
+Ðoan chuong trình sau dây in ra ket qua gì ?
+double x = (double) (3/5);
+	cout << x;
+
+Tra loi:
+Doan chuong trinh da cho in ra 0.6 (la gia tri cua x duoi dang so 
+thap phan).

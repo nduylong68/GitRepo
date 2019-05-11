@@ -1,0 +1,6 @@
+Viet mot chuong trình divideByZero de xem chuyen gì xay ra khi ban 
+dem chia mot giá tri kieu int hoac double cho 0 hoac lay dong du cho 0.
+
+Tra loi: 
+Chuong trinh se khong ra ket qua. Trinh bien dich se thong bao
+warning: division by zero [-Wdiv-by-zero].

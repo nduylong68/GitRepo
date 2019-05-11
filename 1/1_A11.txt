@@ -1,0 +1,9 @@
+Chuyen doi nhiet do. Dong lenh sau co nhiem vu doi tu do F 
+(Fahrenheit) sang do C (Celsius). Lenh do co gi sai ?
+double C = (F - 32) * (5 / 9);
+
+Tra loi:
+Chua khai bao F.
+Trong truong hop da khai bao F va F mang kieu int thi de nhan duoc
+gia tri C mang kieu double can phai ghi nhu sau :
+double C = (double) (F - 32) * (5 / 9);

@@ -1,0 +1,19 @@
+Thu xem trình biên dich nói gì voi mot chuong trình có hàm main 
+chua doan code sau
+int a = 27 * "three";
+hoac
+	double x;
+	cout << x;
+Neu chuyen dòng khai báo x ra ngoài hàm main thì chuyen gì xay ra?
+
+Tra loi:
+
+Voi int a = 27 * "three";
+	Trinh bien dich se bao khong co phep tinh nao thuc hien giua
+mot bien kieu int va mot bien kieu const char.
+
+Voi double x; cout << x;
+	X se tu duoc gan bang mot gia tri bat ki.
+
+	Neu chuyen x ra ngoai main thi x se tu duoc gan bang 0.
+

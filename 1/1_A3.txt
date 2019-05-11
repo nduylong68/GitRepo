@@ -1,0 +1,8 @@
+Tai sao doan code duoi dây không in ra 4294967296 = 2^32?
+int x = 65536;
+	long y = x * x;
+	cout << y;
+
+Tra loi:
+Vi ket qua 4294967296 (= 2^32) vuot qua gia tri ma kieu long cho 
+phep (2^32 - 1 ) 
